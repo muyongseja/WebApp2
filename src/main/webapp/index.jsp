@@ -3,5 +3,7 @@
 <body>
 <h2>Hello World!</h2>
 <a href="first">첫번째 요청</a>
+<br><br>
+<a href="second">두번째 요청</a>
 </body>
 </html>
