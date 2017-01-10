@@ -51,7 +51,10 @@ public class SecondController {
 			String chk){
 		System.out.println(user.getName() + ", " +
 			user.getAge() + ", " + user.getPoint() + ", " +chk);
-		return null;
+		
+		ModelAndView mv = new ModelAndView("/WEB-INF/views/five.jsp");
+		mv.addObject("user", user);
+		return mv;
 	}
 	
 	@RequestMapping("/sixth")
