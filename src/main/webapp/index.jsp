@@ -22,6 +22,8 @@
 	<input type="checkbox" name="chk" value="test"/>
 	<input type="submit" value="다섯번째 요청" />
 </form>
+<br><br>
+<a href="sixth">여섯번째 요청</a>
 </body>
 </html>
 
