@@ -3,9 +3,12 @@ package controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import model.UserDto;
 
 @Controller
 public class SecondController {
@@ -34,6 +37,14 @@ public class SecondController {
 			int age,
 			double point){
 		System.out.println(n + ", " + age + ", " + point);
+		return null;
+	}
+	
+	@RequestMapping("/fifth")
+	public ModelAndView fifthRequest(
+			@ModelAttribute UserDto user){
+		System.out.println(user.getName() + ", " +
+			user.getAge() + ", " + user.getPoint());
 		return null;
 	}
 }
