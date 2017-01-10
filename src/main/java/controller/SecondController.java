@@ -1,7 +1,9 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -63,6 +65,21 @@ public class SecondController {
 		list.add("짬뽕");
 		list.add("국수");
 		view.addObject("foodList", list);
+		
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("f1", "사과");
+		map.put("f2", "배");
+		map.put("f3", "참외");
+		view.addAllObjects(map);
+		
+		List listDay = new ArrayList();
+		listDay.add("월요일");
+		listDay.add("화요일");
+		listDay.add("수요일");
+		
+		Map mapDay = new HashMap();
+		mapDay.put("day", listDay);
+		view.addAllObjects(mapDay);
 		
 		return view;
 	}
