@@ -19,6 +19,7 @@
 	<input type="text" name="name"/><br><br>
 	<input type="text" name="age"/><br><br>
 	<input type="text" name="point"/><br><br>
+	<input type="checkbox" name="chk" value="test"/>
 	<input type="submit" value="다섯번째 요청" />
 </form>
 </body>

@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -31,7 +32,7 @@ public class SecondController {
 		return mv;
 	}
 	
-	@RequestMapping("/fourth")
+	@RequestMapping(value="/fourth", method=RequestMethod.GET)
 	public ModelAndView fourthRequest(
 			@RequestParam("name") String n, 
 			int age,
@@ -40,11 +41,12 @@ public class SecondController {
 		return null;
 	}
 	
-	@RequestMapping("/fifth")
+	@RequestMapping(value="/fifth", method=RequestMethod.POST)
 	public ModelAndView fifthRequest(
-			@ModelAttribute UserDto user){
+			UserDto user,
+			String chk){
 		System.out.println(user.getName() + ", " +
-			user.getAge() + ", " + user.getPoint());
+			user.getAge() + ", " + user.getPoint() + ", " +chk);
 		return null;
 	}
 }
