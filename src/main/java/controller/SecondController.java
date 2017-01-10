@@ -31,9 +31,9 @@ public class SecondController {
 	@RequestMapping("/fourth")
 	public ModelAndView fourthRequest(
 			@RequestParam("name") String n, 
-			@RequestParam("age") int a,
-			@RequestParam("point") double p){
-		System.out.println(n + ", " + a + ", " + p);
+			int age,
+			double point){
+		System.out.println(n + ", " + age + ", " + point);
 		return null;
 	}
 }

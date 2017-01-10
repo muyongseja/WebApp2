@@ -14,6 +14,13 @@
 	<input type="text" name="point"/><br><br>
 	<input type="submit" value="네번째 요청" />
 </form>
+<br><br>
+<form method="post" action="fifth">
+	<input type="text" name="name"/><br><br>
+	<input type="text" name="age"/><br><br>
+	<input type="text" name="point"/><br><br>
+	<input type="submit" value="다섯번째 요청" />
+</form>
 </body>
 </html>
 
